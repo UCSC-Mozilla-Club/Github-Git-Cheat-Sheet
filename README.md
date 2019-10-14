@@ -3,6 +3,9 @@
 Git  is  the  open  source  distributed  version  control  system  that  facilitates  GitHub  activities  on  your  laptop  or 
 desktop. This cheat sheet summarizes commonly used Git command line instructions for quick reference.
 
+- **[Install git](#install-git)**<br>
+- **[How to use git](#how-to-use-git)**<br>
+- **[Configure tooling](#configure-tooling)**<br>
 
 ## INSTALL GIT
 
@@ -50,3 +53,29 @@ $ emerge --ask --verbose dev-vcs/git
 ```bash
 $ pacman -S git
 ```
+
+## HOW TO USE GIT
+
+**Windows**<br>
+
+Right click on any location and click `git bash`.
+
+**Linux and Mac**<br>
+Open `Terminal` to use git.
+
+## CONFIGURE TOOLING
+
+Configure user information for all local repositories<br>
+
+Sets the name you want attached to your commit transactions
+
+```bash
+$ git config --global user.name "[name]"
+```
+
+Sets the email you want attached to your commit transactions
+
+```bash
+$ git config --global user.email "[email address]"
+```
+
