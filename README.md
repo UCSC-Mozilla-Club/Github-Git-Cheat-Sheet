@@ -100,10 +100,9 @@ $ git clone [url]
 ```
 
 ## MAKE CHANGES
-
 **Review edits and craft a commit transaction**
 
-List all new or modified files to be commited
+Lists all new or modified files to be commited
 ```bash
 $ git status
 ```
