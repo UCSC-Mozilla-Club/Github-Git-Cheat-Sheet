@@ -109,7 +109,7 @@ Snapshot a file in preparation for versioning
 ```bash
 $ git add [file]
 ```
-Snapshot all the files in preparation for versioning
+Snapshot all the files of the current directory in preparation for versioning
 ```bash
 $ git add .
 ```
