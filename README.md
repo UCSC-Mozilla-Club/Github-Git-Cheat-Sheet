@@ -9,6 +9,7 @@ desktop. This cheat sheet will help you with commonly used Git command line inst
 - **[How to use Git](#how-to-use-git)**<br>
 - **[Configure tooling](#configure-tooling)**<br>
 - **[Create repositories](#create-repositories)**<br>
+- **[Make changes](#make-changes)**<br>
 
 ## INSTALL GIT
 
