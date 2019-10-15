@@ -98,3 +98,37 @@ Downloads a project and its entire version history
 ```bash
 $ git clone [url]
 ```
+
+## MAKE CHANGES
+
+**Review edits and craft a commit transaction**
+
+List all new or modified files to be commited
+```bash
+$ git status
+```
+
+Shows file differences not yet staged
+```bash
+$ git diff
+```
+
+Snapshots the file in preparation for versioning
+```bash
+$ git add [file]
+```
+Snapshots all the files in preparation for versioning
+```bash
+$ git add .
+```
+
+Unstages the file (reset), but preserve its contents
+```bash
+$ git reset [file]
+```
+
+Records file snapshots permanently in version history
+```bash
+$ git commit -m "[descriptive message]"
+```
+
