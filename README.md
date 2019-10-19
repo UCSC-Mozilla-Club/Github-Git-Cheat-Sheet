@@ -262,28 +262,50 @@ If the file was added with your most recent commit, and you have not pushed to G
 **[SUPPRESS TRACKING](https://github.com/UCSC-Mozilla-Club/Github-Git-Cheat-Sheet#suppress-tracking)**
 **Exclude temporary files and paths**
  Lists all ignored files in this project
-***.log 
-build/
- temp-***
+
+>  ****.log** 
+> **build/**
+>  **temp-***
+>*
+
  
   A text file named .gitignore suppresses accidental versioning of files and paths matching the specified patterns.
   
- **$ git ls-files --other --ignored --exclude-standard** 
+
+
+> **$ git ls-files --other --ignored --exclude-standard**
+
+
 
 **[Save fragments](https://github.com/UCSC-Mozilla-Club/Github-Git-Cheat-Sheet#save-fragments)**
 
 **Shelve and restore incomplete changes**
 Temporarily stores all modified tracked files
-**$ git stash** 
+
+> **$ git stash**
+
+
 
 Lists all stashed changesets
- **$ git stash list**
+ 
+
+> **$ git stash list**
+
+
   
  Restores the most recently stashed files 
-  **$ git stash pop** 
+ 
+
+    
+
+> **$ git stash pop**
+
   
   Discards the most recently stashed changeset.
-  **$ git stash drop**
+  
+
+> ****$ git stash drop****
+
    
    
   **[Review history](https://github.com/UCSC-Mozilla-Club/Github-Git-Cheat-Sheet#review-history)**
@@ -291,26 +313,44 @@ Lists all stashed changesets
  **Browse and inspect the evolution of project files**
 
 Lists version history for the current branch 
-  **$ git log**
+  
+
+> **$ git log**
+
+
   
 Lists version history for a file, including renames
-   **$ git log --follow [file]** 
+   
+
+> **$ git log --follow [file]**
+
+
    
 Shows content differences between two branches 
-    **$ git diff [first-branch]...[second-branch]** 
+    
+
+> **$ git diff [first-branch]...[second-branch]**
+
+
    
 Outputs metadata and content changes of the specified commit 
-    **$ git show [commit]** 
+   
+
+>  ****$ git show [commit]****
+
    
  **[Redo commits](https://github.com/UCSC-Mozilla-Club/Github-Git-Cheat-Sheet#redo-commits)**
 
 **Erase mistakes and craf replacement history** 
 
 Undoes all commits after [commit], preserving changes locally
-**$ git reset [commit]** 
+
+> ****$ git reset [commit]****
 
  Discards all history and changes back to the specified commit
- **$ git reset --hard [commit]** 
+ 
+
+> ****$ git reset --hard [commit]****
 
  
  **[Synchronize changes](https://github.com/UCSC-Mozilla-Club/Github-Git-Cheat-Sheet#synchronize-changes)**
@@ -318,17 +358,38 @@ Undoes all commits after [commit], preserving changes locally
 **Register a repository bookmark and exchange version history**
 
 Downloads all history from the repository bookmark
- **$ git fetch [bookmark]** 
+
+>  ****$ git fetch [bookmark]****
+
  
   Combines bookmark’s branch into current local branch 
-  **$ git merge [bookmark]/[branch]** 
+  
+
+> ****$ git merge [bookmark]/[branch]****
+
  
  Uploads all local branch commits to GitHub
-  **$ git push [alias] [branch]** 
+ 
+
+> **$ git push [alias] [branch]**
+
+ 
   
   Downloads bookmark history and incorporates changes
-   **$ git pull** 
+  
+
+>  ****$ git pull****
+
    
+
+
+
+
+
+
+
+
+ 
 
 
 
