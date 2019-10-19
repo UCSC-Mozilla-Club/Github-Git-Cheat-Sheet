@@ -1,34 +1,33 @@
+
 # GitHub Git Cheat Sheet
 
-Git  is  an open  source  distributed  version  control  system  that  facilitates  GitHub  activities  on  your  laptop  or 
-desktop. This cheat sheet will help you with commonly used Git command line instructions for quick reference.
+Git is an open-source distributed version control system that facilitates GitHub activities on your laptop or desktop. This cheat sheet will help you with commonly used Git command-line instructions for quick reference.
 
 ### Catalog
-
-- **[Install Git](#install-git)**
-- **[How to use Git](#how-to-use-git)**
-- **[Configure tooling](#configure-tooling)**
-- **[Create repositories](#create-repositories)**
-- **[Make changes](#make-changes)**
-- **[Group changes](#group-changes)**
-- **[Refactor filenames](#refactor-filenames)**
-- **[Suppress tracking](#suppress-tracking)**
-- **[Save fragments](#save-fragments)**
-- **[Review history](#review-history)**
-- **[Redo commits](#redo-commits)**
-- **[Synchronize changes](#synchronize-changes)**
+ 1. **[Install Git](#install-git)**
+ 2. **[How to use Git](#how-to-use-git)**
+ 3. **[Configure tooling](#configure-tooling)**
+ 4. **[Create repositories](#create-repositories)**
+ 5. **[Make changes](#make-changes)**
+ 6. **[Group changes](#group-changes)**
+ 7. **[Refactor filenames](#refactor-filenames)**
+ 8. **[Suppress tracking](#suppress-tracking)**
+ 9. **[Save fragments](#save-fragments)**
+ 10. **[Review history](#review-history)**
+ 11. **[Redo commits](#redo-commits)**
+ 12. **[Synchronize changes](#synchronize-changes)**
 
 ## INSTALL GIT
 
 ### For Windows users
 1. Download [Git for Windows Setup](https://git-scm.com/download/win)
-2. Install Git through the setup. Usually all configurations can be left in default settings.
+2. Install Git through the setup. Usually, all configurations can be left in default settings.
 
 ### For macOS users
 Download [Git for Mac](https://git-scm.com/download/mac)
 
 ### For Linux users
-#### Debian/Ubuntu
+#### Debian/Ubuntu 
 For the latest stable version for your release of Debian/Ubuntu
 ```bash
 $ sudo apt-get update
@@ -59,7 +58,7 @@ $ pacman -S git
 ## HOW TO USE GIT
 
 **Windows**<br>
-Right click on any location and click `git bash`.
+Right-click on any location and click `git bash`.
 
 **Linux and Mac**<br>
 Open `Terminal` to use git.
@@ -68,12 +67,12 @@ Open `Terminal` to use git.
 
 **Configure user information for all local repositories**<br>
 
-Set the name you want attached to your commit transactions
+Set the name you want to be attached to your commit transactions
 ```bash
 $ git config --global user.name "[name]"
 ```
 
-Set the email address you want attached to your commit transactions
+Set the email address you want to be attached to your commit transactions
 ```bash
 $ git config --global user.email "[email address]"
 ```
@@ -259,7 +258,7 @@ Download all history from the repository bookmark
 ```
 $ git fetch [bookmark]
 ```
-Combine bookmark’s branch into current local branch
+Combine bookmark's branch into the current local branch
 ```
 $ git merge [bookmark]/[branch]
 ```
@@ -271,3 +270,6 @@ Download bookmark history and incorporates changes
 ```
 $ git pull
 ```
+
+
+[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/Naereen/)
