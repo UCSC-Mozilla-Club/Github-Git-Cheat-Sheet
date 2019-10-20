@@ -5,12 +5,18 @@ desktop. This cheat sheet will help you with commonly used Git command line inst
 
 ### Catalog
 
-- **[Install Git](#install-git)**<br>
-- **[How to use Git](#how-to-use-git)**<br>
-- **[Configure tooling](#configure-tooling)**<br>
-- **[Create repositories](#create-repositories)**<br>
-- **[Make changes](#make-changes)**<br>
-- **[Group changes](#group-changes)**<br>
+- **[Install Git](#install-git)**
+- **[How to use Git](#how-to-use-git)**
+- **[Configure tooling](#configure-tooling)**
+- **[Create repositories](#create-repositories)**
+- **[Make changes](#make-changes)**
+- **[Group changes](#group-changes)**
+- **[Refactor filenames](#refactor-filenames)**
+- **[Suppress tracking](#suppress-tracking)**
+- **[Save fragments](#save-fragments)**
+- **[Review history](#review-history)**
+- **[Redo commits](#redo-commits)**
+- **[Synchronize changes](#synchronize-changes)**
 
 ## INSTALL GIT
 
@@ -43,11 +49,6 @@ $ yum install git
 For Fedora 22 and later
  ```bash
 $ dnf install git
-```
-
-#### Gentoo
-```bash
-$ emerge --ask --verbose dev-vcs/git
 ```
 
 #### Arch Linux
@@ -109,7 +110,7 @@ Snapshot a file in preparation for versioning
 ```bash
 $ git add [file]
 ```
-Snapshot all the files of the current directory in preparation for versioning
+Snapshot all files of the current directory in preparation for versioning
 ```bash
 $ git add .
 ```
@@ -124,7 +125,7 @@ Record file snapshots permanently in version history
 $ git commit -m "[descriptive message]"
 ```
 
-### GROUP CHANGES
+## GROUP CHANGES
 
 **Name a series of commits and combine completed efforts**
 
@@ -151,4 +152,122 @@ $ git merge [branch-name]
 Delete the specified branch
 ```bash
 $ git branch -d [branch-name]
+```
+
+## REFACTOR FILENAMES
+
+**Relocate and remove versioned files**
+
+Delete the file from the working directory and stages the deletion
+```bash
+$ git rm [file]
+```
+
+Remove the file from version control but preserves the file locally
+```
+$ git rm --cached [file]
+```
+
+Change the file name and prepares it for commit
+```
+$ git mv [file-original] [file-renamed]
+```
+
+## SUPPRESS TRACKING
+
+**Exclude temporary files and paths**
+
+List all ignored files in this project
+```
+$ git ls-files --other --ignored --exclude-standard
+```
+
+A text file named .gitignore suppresses accidental versioning of files and paths matching the specified paterns
+```
+*.log
+build/
+temp-*
+```
+
+## SAVE FRAGMENTS
+
+**Shelve and restore incomplete changes**
+
+Temporarily store all modified tracked files
+```
+$ git stash
+```
+
+List all stashed changesets
+```
+$ git stash list
+```
+
+Restore the most recently stashed files
+```
+$ git stash pop
+```
+
+Discard the most recently stashed changeset
+```
+$ git stash drop
+```
+
+## REVIEW HISTORY
+
+**Browse and inspect the evolution of project files**
+
+List version history for the current branch
+```
+$ git log
+```
+
+List version history for a file, including renames
+```
+$ git log --follow [file]
+```
+
+Show content differences between two branches
+```
+$ git diff [first-branch]...[second-branch]
+```
+
+Output metadata and content changes of the specified commit
+```
+$ git show [commit]
+```
+
+## REDO COMMITS
+
+**Erase mistakes and craf replacement history**
+
+Undo all commits afer [commit], preserving changes locally
+```
+$ git reset [commit]
+```
+
+Discard all history and changes back to the specified commit
+```
+$ git reset --hard [commit]
+```
+
+## SYNCHRONIZE CHANGES
+
+**Register a repository bookmark and exchange version history**
+
+Download all history from the repository bookmark
+```
+$ git fetch [bookmark]
+```
+Combine bookmark’s branch into current local branch
+```
+$ git merge [bookmark]/[branch]
+```
+Upload all local branch commits to GitHub
+```
+$ git push [alias] [branch]
+```
+Download bookmark history and incorporates changes
+```
+$ git pull
 ```
